@@ -15,7 +15,6 @@ RUN apt update && apt install -y \
    libjpeg-dev \
    libpq-dev \
    libfreetype6-dev \
-        # && a2enmod ldap && a2enmod authnz_ldap \
 	&& docker-php-ext-install pdo_mysql \
 	&& docker-php-ext-configure gd --with-freetype --with-jpeg \
 	&& docker-php-ext-install -j$(nproc) gd 
